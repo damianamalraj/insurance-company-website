@@ -1,0 +1,806 @@
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+.wrapper {
+    max-width: 600px;
+    min-width: 300px;
+    margin: auto;
+}
+
+h1 {
+    font-family: "Frank Ruhl Libre", serif;
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-family: "Frank Ruhl Libre", serif;
+}
+
+p {
+    font-family: "Fira Sans", sans-serif;
+}
+
+span {
+    font-family: "Frank Ruhl Libre", serif;
+}
+
+button {
+    margin-top: 3rem;
+    min-width: 9rem;
+    min-height: 2.7rem;
+    border: none;
+    font-weight: bold;
+    font-size: 0.7rem;
+    border-radius: 5rem;
+    box-shadow: 2px 5px 5px -4px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 2px 5px 5px -4px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 2px 5px 5px -4px rgba(0, 0, 0, 0.75);
+}
+
+/* HEADER */
+header .header {
+    min-height: 50rem;
+    padding: 4rem 1rem;
+    background: url("./img/family.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-color: #c7ddea;
+}
+
+header .header h1 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+}
+header .header p {
+    font-size: 0.85rem;
+    line-height: 1.5rem;
+    color: rgba(0, 0, 0, 0.95);
+    margin-top: 2rem;
+}
+
+header .header span {
+    color: white;
+}
+
+/* NAV */
+.nav {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    display: none;
+}
+
+.nav a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #a9a19e;
+}
+
+.nav a:hover {
+    color: black;
+}
+
+/* CONTACT NAV, OUR OFFER NAV & WHY US NAV */
+.contact-nav,
+.our-offer-nav,
+.why-us-nav {
+    min-height: 10rem;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+}
+
+.contact-nav a,
+.our-offer-nav a,
+.why-us-nav a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #a9a19e;
+}
+
+.contact-nav a:hover,
+.our-offer-nav a:hover,
+.why-us-nav a:hover {
+    color: black;
+}
+
+/* LEARN MORE */
+header .learn-more {
+    background-color: #f17949;
+    min-height: 25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header .learn-more h1 {
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bolder;
+}
+
+/* JOIN TODAY */
+
+header .join-today {
+    background-color: #fab131;
+    min-height: 25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header .join-today h1 {
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bolder;
+}
+
+/* YOUR PERSONEL */
+main .your-personal {
+    background-color: #a9a19e;
+    min-height: 40rem;
+    padding-bottom: 4rem;
+}
+
+main .your-personal h1 {
+    color: white;
+    padding: 2rem 1rem;
+}
+
+main .your-personal button {
+    display: none;
+}
+
+main .your-personal p {
+    font-size: 0.85rem;
+    line-height: 1.5rem;
+    padding: 0 1rem;
+}
+
+main .your-personal article {
+    max-height: 50rem;
+    margin: 4rem 3rem 0 3rem;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main .your-personal article h2 {
+    margin: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+main .your-personal article p {
+    text-align: center;
+}
+
+main .your-personal article .child-background {
+    background-color: #c7ddea;
+    padding: 0;
+    width: 100%;
+    height: 12rem;
+    position: relative;
+    transform: translateY(-20%);
+    border-radius: 0.5rem;
+}
+main .your-personal article .adult-background {
+    background-color: #fab131;
+    padding: 0;
+    width: 100%;
+    height: 12rem;
+    position: relative;
+    transform: translateY(-20%);
+    border-radius: 0.5rem;
+}
+main .your-personal article .old-background {
+    background-color: #f17949;
+    padding: 0;
+    width: 100%;
+    height: 12rem;
+    position: relative;
+    transform: translateY(-20%);
+    border-radius: 0.5rem;
+}
+
+.child {
+    background: url("./img/child.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-position: top;
+    background-position-y: 25px;
+}
+
+.adult {
+    background: url("./img/adult.png");
+    background-size: 30%;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-position: top;
+    background-position-y: 50px;
+}
+
+.old {
+    background: url("./img/old.png");
+    background-size: 50%;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-position: top;
+    background-position-y: 60px;
+}
+
+/* ABOUT US */
+main .about-us {
+    background-color: #fab131;
+    max-height: 50rem;
+    padding-bottom: 5rem;
+}
+
+main .about-us h1 {
+    color: white;
+    padding: 2rem 0 1rem 0;
+    text-align: center;
+}
+
+main .about-us p {
+    text-align: center;
+    padding: 0 3rem;
+    font-size: 0.85rem;
+    line-height: 1.5rem;
+}
+
+/* HOW IT WORKS */
+main .how-it-works article {
+    min-height: 15rem;
+    margin: 0;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+main .how-it-works article p {
+    text-align: center;
+}
+
+main .how-it-works article:first-child {
+    background-color: #c7ddea;
+}
+
+main .how-it-works article:nth-child(3) {
+    background-color: #ddd;
+}
+main .how-it-works article:nth-child(5) {
+    background-color: #f17949;
+}
+
+main .how-it-works article span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 2rem;
+    padding: 0.5rem;
+    opacity: 50%;
+}
+
+/* FAB */
+.fab {
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background: #c7ddea url("./img/expand_less_black_24dp.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.fab-container p {
+    display: none;
+    color: black;
+    opacity: 90%;
+}
+
+/* FOOTER */
+footer {
+    min-height: 17rem;
+    background: gray;
+    margin-bottom: 3rem;
+}
+
+/* CONTACT.HTML */
+/* CONTACT HEADER */
+.contact-header {
+    min-height: 25rem;
+    background: #c7ddea url("./img/man-baby.png");
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-position-x: 90%;
+}
+
+.contact-header h1 {
+    padding: 3rem 0 0 1rem;
+}
+
+/* CONTACT FORM */
+.form-container {
+    min-height: 30rem;
+    background-color: #a9a19e;
+    color: whitesmoke;
+}
+
+form {
+    padding: 1rem 1rem 3rem 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+form input {
+    min-width: 100%;
+    min-height: 2rem;
+    border-radius: 5px;
+    border: none;
+    margin-top: 0.5rem;
+}
+
+textarea {
+    min-width: 100%;
+    border-radius: 5px;
+    border: none;
+    margin-top: 0.5rem;
+}
+
+form button {
+    max-width: 4rem;
+    max-height: 2rem;
+    padding: 0.5rem;
+}
+
+/* CONTACT MAP */
+.map-container {
+    position: relative;
+}
+
+.map {
+    min-height: 30rem;
+    background: url("./img/map.png");
+    background-size: contain;
+    transition: all 1s ease-in;
+    display: flex;
+    justify-content: center;
+}
+
+.map-container:hover .map {
+    transform: scale(1.2);
+}
+
+/* CONTACT CARD */
+.card {
+    position: absolute;
+    background-color: #fab131;
+    max-width: 20rem;
+    min-height: 5rem;
+    transform: translateY(-20%);
+}
+
+.card h1 {
+    font-size: 2rem;
+    color: white;
+    padding: 1rem;
+}
+
+.card p {
+    color: white;
+    padding: 1rem;
+}
+
+/* CONTACT MARKER */
+.marker {
+    width: 3rem;
+    height: 3rem;
+    background: url("./img/marker.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: translateY(15rem);
+}
+
+/* WHY US */
+main .why-us {
+    height: 40rem;
+    background-color: #c7ddea;
+    padding: 3rem;
+}
+
+main .because {
+    height: 40rem;
+    background-color: #fab131;
+    padding: 3rem;
+}
+
+main .there-for {
+    height: 40rem;
+    background-color: #f17949;
+    padding: 3rem;
+}
+
+/* OUR OFFER */
+main .our-offer {
+    height: 100vh;
+    text-align: center;
+    background-color: #c7ddea;
+    padding: 3rem;
+}
+
+main .our-offer p {
+    line-height: 1.5rem;
+}
+
+/* DESKTOP VERSION */
+@media screen and (min-width: 800px) {
+    .wrapper {
+        max-width: 1500px;
+    }
+
+    body {
+        margin: auto;
+    }
+
+    /* HEADER DESKTOP*/
+    header {
+        max-height: 50rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    header .header {
+        padding: 6rem;
+        background-size: 65%;
+        background-repeat: no-repeat;
+        background-position: bottom right;
+
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 3;
+        box-sizing: border-box;
+    }
+
+    header .header h1 {
+        font-size: 4rem;
+        padding: 0;
+        line-height: 4rem;
+    }
+
+    header .header p {
+        font-size: 1rem;
+        line-height: 2rem;
+        max-width: 55%;
+    }
+
+    /* LEARN MORE DESKTOP*/
+    header .learn-more {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    header .learn-more {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+    /* NAV DESKTOP*/
+    .nav {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        min-height: 5rem;
+    }
+
+    /* YOUR PERSONL DESKTOP*/
+    main .your-personal {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    main .your-personal button {
+        display: block;
+    }
+
+    main .your-personal h1 {
+        font-size: 4rem;
+        padding: 0;
+        line-height: 4rem;
+    }
+
+    main .your-personal p {
+        font-size: 1rem;
+        line-height: 2rem;
+    }
+
+    main .your-personal a {
+        text-decoration: none;
+    }
+
+    main .your-personal div:nth-child(1) {
+        grid-column: 1/2;
+        padding: 10rem 0 0 10rem;
+    }
+    main .your-personal div:nth-child(2) {
+        grid-column: 2/3;
+        padding: 10rem 10rem 0 0;
+    }
+    main .your-personal div:nth-child(3) {
+        grid-column: 1/3;
+        display: flex;
+        justify-content: space-around;
+        transform: translateY(50%);
+        padding: 0 5rem;
+    }
+
+    main .your-personal div:nth-child(3) article {
+        max-width: 25rem;
+        margin: 0 1rem;
+        padding: 1rem;
+        background-color: white;
+        border-radius: 0.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main .your-personal div:nth-child(3) h2 {
+        margin: 0.5rem;
+        margin-bottom: 1rem;
+    }
+
+    main .your-personal div:nth-child(3) p {
+        text-align: center;
+        line-height: 1.5rem;
+    }
+
+    main .your-personal article .child-background {
+        background-color: #c7ddea;
+        padding: 0;
+        width: 100%;
+        height: 12rem;
+        position: relative;
+        transform: translateY(-20%);
+        border-radius: 0.5rem;
+    }
+    main .your-personal article .adult-background {
+        background-color: #fab131;
+        padding: 0;
+        width: 100%;
+        height: 12rem;
+        position: relative;
+        transform: translateY(-20%);
+        border-radius: 0.5rem;
+    }
+    main .your-personal article .old-background {
+        background-color: #f17949;
+        padding: 0;
+        width: 100%;
+        height: 12rem;
+        position: relative;
+        transform: translateY(-20%);
+        border-radius: 0.5rem;
+    }
+
+    .child {
+        background: url("./img/child.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-position: top;
+        background-position-y: 25px;
+    }
+
+    .adult {
+        background: url("./img/adult.png");
+        background-size: 30%;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-position: top;
+        background-position-y: 50px;
+    }
+
+    .old {
+        background: url("./img/old.png");
+        background-size: 50%;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-position: top;
+        background-position-y: 60px;
+    }
+
+    /* ABOUT US DESKTOP */
+    main .about-us {
+        max-height: 50rem;
+        padding: 15rem 0;
+    }
+
+    main .about-us article {
+        max-width: 60%;
+        margin: auto;
+        height: 100%;
+    }
+
+    main .about-us h1 {
+        font-size: 4rem;
+    }
+
+    main .about-us article p {
+        font-size: 1rem;
+        line-height: 2rem;
+    }
+
+    /* HOW IT WORKS DESKTOP */
+    main .how-it-works {
+        max-height: 40rem;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    main .how-it-works article h1 {
+        font-size: 4rem;
+        max-width: 80%;
+        margin: auto;
+        text-align: center;
+    }
+
+    main .how-it-works article p {
+        font-size: 1rem;
+    }
+
+    main .how-it-works article {
+        height: 20rem;
+    }
+
+    /* FAB DESKTOP*/
+    .fab-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-height: 3rem;
+        background-color: #a9a19e;
+    }
+
+    .fab-container p {
+        display: flex;
+        text-align: center;
+    }
+
+    .fab {
+        right: 0;
+        bottom: 0;
+        cursor: pointer;
+        margin-left: 3rem;
+        position: relative;
+        display: block;
+        background: url("./img/expand_less_black_24dp.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    /* CONTACT.HTML DESKTOP */
+    /* CONTACT HEADER DESKTOP */
+    .contact-header br {
+        display: none;
+    }
+
+    .contact-header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* CONTACT NAV DESKTOP */
+    .contact-nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        min-height: 5rem;
+    }
+
+    /* OUR OFFER & WHY US */
+    .our-offer-nav,
+    .why-us-nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        min-height: 5rem;
+        position: sticky;
+        top: 0;
+        background-color: white;
+    }
+
+    .why-us div,
+    .because div,
+    .there-for div {
+        align-self: center;
+        justify-self: center;
+    }
+
+    .why-us p,
+    .because p,
+    .there-for p {
+        max-width: 70%;
+        margin: auto;
+        line-height: 2rem;
+    }
+
+    /* CONTACT FORM DESKTOP */
+    main .form-container form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 5rem 5rem 5rem 5rem;
+    }
+
+    /* CONTACT CARD DESKTOP */
+    .card {
+        position: relative;
+        background-color: #fab131;
+        max-width: 30rem;
+        max-height: 10rem;
+        transform: translateX(-20rem);
+        align-self: center;
+    }
+
+    /* WHY US */
+    main .why-us {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    main .because {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    main .there-for {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    main .our-offer p {
+        max-width: 60%;
+        margin: auto;
+        line-height: 2rem;
+    }
+}
